@@ -9,6 +9,5 @@ class BiometricRequestAccessParams {
   /// 0-128 characters.
   final String? reason;
 
-  BiometricRequestAccessParams({required this.reason})
-      : assert(reason == null || reason.length <= 128);
+  BiometricRequestAccessParams({required this.reason}) : assert(reason == null || reason.length <= 128);
 }

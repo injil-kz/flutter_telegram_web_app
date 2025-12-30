@@ -1,7 +1,7 @@
 part of '../../../../telegram_web_app.dart';
 
 /// **Bot API 8.0+**
-/// 
+///
 /// This object provides access to gyroscope data on the device.
 class Gyroscope {
   Gyroscope._();
@@ -37,6 +37,5 @@ class Gyroscope {
 
   /// Stops tracking gyroscope data. If an optional callback parameter is provided, the
   /// callback function will be called with a boolean indicating whether tracking was successfully stopped.
-  void stop({required void Function(bool success) onResult}) =>
-      Telegram.WebApp.Gyroscope.stop(onResult.toJS);
+  void stop({required void Function(bool success) onResult}) => Telegram.WebApp.Gyroscope.stop(onResult.toJS);
 }

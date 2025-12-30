@@ -28,16 +28,14 @@ class TelegramInitData {
     TelegramUser user = TelegramUser(
       id: userData['id'],
       firstname: userData['first_name'],
-      lastname:
-          ((userData['last_name'] as String?)?.isNotEmpty ?? false) ? userData['last_name'] : null,
+      lastname: ((userData['last_name'] as String?)?.isNotEmpty ?? false) ? userData['last_name'] : null,
       username: userData['username'],
       languageCode: userData['language_code'],
       allowsWriteToPm: userData['allows_write_to_pm'],
     );
 
-    int? chatInstance = validationData['chat_instance']?.isNotEmpty ?? false
-        ? int.parse(validationData['chat_instance']!)
-        : null;
+    int? chatInstance =
+        validationData['chat_instance']?.isNotEmpty ?? false ? int.parse(validationData['chat_instance']!) : null;
     String? chatType = validationData['chat_type'];
     String? queryId = validationData['query_id'];
 

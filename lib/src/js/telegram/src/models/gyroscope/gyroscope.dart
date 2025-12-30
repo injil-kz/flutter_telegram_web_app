@@ -2,7 +2,6 @@ part of '../../../telegram_js_models.dart';
 
 /// This object provides access to gyroscope data on the device.
 extension type GyroscopeJSObject._(JSObject _) implements JSObject {
-
   /// Indicates whether gyroscope tracking is currently active.
   external bool get isStarted;
 

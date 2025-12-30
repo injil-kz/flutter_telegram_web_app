@@ -8,6 +8,9 @@ class TelegramWebAppFake extends TelegramWebApp {
   TelegramInitData get initData => TelegramInitData.fake();
 
   @override
+  String get initDataRaw => "This is fake row data";
+
+  @override
   WebAppInitData? get initDataUnsafe => null;
 
   @override
@@ -230,7 +233,7 @@ class TelegramWebAppFake extends TelegramWebApp {
     print("Mocked setEmojiStatus");
     return false;
   }
-  
+
   @override
   Future<bool> requestEmojiStatusAccess() async {
     print("Mocked requestEmojiStatusAccess");

@@ -6,6 +6,5 @@ part of '../../../telegram_web_app.dart';
 /// screen.
 /// eventHandler receives no parameters.
 class HomeScreenAddedEvent extends TelegramEvent {
-  HomeScreenAddedEvent(void Function() eventHandler)
-      : super(TelegramEventType.homeScreenAdded, eventHandler);
+  HomeScreenAddedEvent(void Function() eventHandler) : super(TelegramEventType.homeScreenAdded, eventHandler);
 }

@@ -40,6 +40,5 @@ class DeviceOrientation {
 
   /// Stops tracking device orientation data. If an optional callback parameter is provided, the
   /// callback function will be called with a boolean indicating whether tracking was successfully stopped.
-  void stop({required void Function(bool success) onResult}) =>
-      Telegram.WebApp.DeviceOrientation.stop(onResult.toJS);
+  void stop({required void Function(bool success) onResult}) => Telegram.WebApp.DeviceOrientation.stop(onResult.toJS);
 }

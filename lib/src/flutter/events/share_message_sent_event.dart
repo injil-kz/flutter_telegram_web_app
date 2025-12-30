@@ -5,6 +5,5 @@ part of '../../../telegram_web_app.dart';
 /// Occurs when the message is successfully shared by the user.
 /// eventHandler receives no parameters.
 class ShareMessageSentEvent extends TelegramEvent {
-  ShareMessageSentEvent(void Function() eventHandler)
-      : super(TelegramEventType.shareMessageSent, eventHandler);
+  ShareMessageSentEvent(void Function() eventHandler) : super(TelegramEventType.shareMessageSent, eventHandler);
 }

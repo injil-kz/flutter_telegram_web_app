@@ -5,6 +5,5 @@ part of '../../../../telegram_web_app.dart';
 /// Occurs when the emoji status is successfully set.
 /// [eventHandler] receives no parameters.
 class EmojiStatusSetEvent extends TelegramEvent {
-  EmojiStatusSetEvent(void Function() eventHandler)
-      : super(TelegramEventType.emojiStatusSet, eventHandler);
+  EmojiStatusSetEvent(void Function() eventHandler) : super(TelegramEventType.emojiStatusSet, eventHandler);
 }

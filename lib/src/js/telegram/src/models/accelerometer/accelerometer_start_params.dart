@@ -11,7 +11,6 @@ extension type AccelerometerStartParamsJSObject._(JSObject _) implements JSObjec
   external int? refreshRate;
 
   external factory AccelerometerStartParamsJSObject({
-    @JS('refresh_rate')
-    required int? refreshRate,
+    @JS('refresh_rate') required int? refreshRate,
   });
 }

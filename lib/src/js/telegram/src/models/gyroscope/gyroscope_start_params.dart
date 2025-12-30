@@ -11,7 +11,6 @@ extension type GyroscopeStartParamsJSObject._(JSObject _) implements JSObject {
   external int? refreshRate;
 
   external factory GyroscopeStartParamsJSObject({
-    @JS('refresh_rate')
-    required int? refreshRate,
+    @JS('refresh_rate') required int? refreshRate,
   });
 }

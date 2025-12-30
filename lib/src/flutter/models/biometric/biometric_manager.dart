@@ -43,8 +43,8 @@ class BiometricManager {
   /// If an optional callback parameter was passed, the callback
   /// function will be called when the object is initialized.
   BiometricManager init([void Function()? objectInitialized]) {
-     _bm.init(objectInitialized?.toJS);
-     return this;
+    _bm.init(objectInitialized?.toJS);
+    return this;
   }
 
   /// Bot API 7.2+ A method that requests permission to use biometrics

@@ -1,7 +1,7 @@
 part of '../../../telegram_js_models.dart';
 
 /// **Bot API 8.0+**
-/// 
+///
 /// This object contains data about the current location.
 @JS('LocationData')
 extension type LocationDataJSObject._(JSObject _) implements JSObject {
@@ -11,11 +11,11 @@ extension type LocationDataJSObject._(JSObject _) implements JSObject {
   /// Longitude in degrees.
   external double get longitude;
 
-  /// Altitude above sea level in meters. 
+  /// Altitude above sea level in meters.
   /// null if altitude data is not available on the device.
   external double? get altitude;
 
-  /// The direction the device is moving in degrees (0 = North, 90 = East, 180 = South, 270 = West). 
+  /// The direction the device is moving in degrees (0 = North, 90 = East, 180 = South, 270 = West).
   /// null if course data is not available on the device.
   external double? get course;
 
@@ -23,7 +23,7 @@ extension type LocationDataJSObject._(JSObject _) implements JSObject {
   /// null if speed data is not available on the device.
   external double? get speed;
 
-  /// Accuracy of the latitude and longitude values in meters. 
+  /// Accuracy of the latitude and longitude values in meters.
   /// null if horizontal accuracy data is not available on the device.
   @JS('horizontal_accuracy')
   external double? get horizontalAccuracy;

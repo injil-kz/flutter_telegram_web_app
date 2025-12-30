@@ -8,8 +8,7 @@ abstract class DataParser {
     for (String pair in pairs) {
       int idx = pair.indexOf("=");
       String key = idx > 0 ? utf8.decode(pair.substring(0, idx).codeUnits) : pair;
-      String? value =
-          idx > 0 && pair.length > idx + 1 ? utf8.decode(pair.substring(idx + 1).codeUnits) : null;
+      String? value = idx > 0 && pair.length > idx + 1 ? utf8.decode(pair.substring(idx + 1).codeUnits) : null;
       parameters[key] = value;
     }
 

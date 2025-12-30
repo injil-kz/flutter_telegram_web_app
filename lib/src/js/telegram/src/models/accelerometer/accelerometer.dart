@@ -2,7 +2,6 @@ part of '../../../telegram_js_models.dart';
 
 /// This object provides access to accelerometer data on the device.
 extension type AccelerometerJSObject._(JSObject _) implements JSObject {
-
   /// Indicates whether accelerometer tracking is currently active.
   external bool get isStarted;
 

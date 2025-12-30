@@ -1,7 +1,7 @@
 part of '../../../../telegram_web_app.dart';
 
 /// **Bot API 8.0+**
-/// 
+///
 /// This object provides access to accelerometer data on the device.
 class Accelerometer {
   Accelerometer._();
@@ -37,6 +37,5 @@ class Accelerometer {
 
   /// Stops tracking accelerometer data. If an optional callback parameter is provided, the
   /// callback function will be called with a boolean indicating whether tracking was successfully stopped.
-  void stop({required void Function(bool success) onResult}) =>
-      Telegram.WebApp.Accelerometer.stop(onResult.toJS);
+  void stop({required void Function(bool success) onResult}) => Telegram.WebApp.Accelerometer.stop(onResult.toJS);
 }

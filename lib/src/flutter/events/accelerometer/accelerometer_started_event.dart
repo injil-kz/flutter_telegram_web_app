@@ -5,6 +5,5 @@ part of '../../../../telegram_web_app.dart';
 /// Occurs when accelerometer tracking has started successfully.
 /// [eventHandler] receives no parameters.
 class AccelerometerStartedEvent extends TelegramEvent {
-  AccelerometerStartedEvent(void Function() eventHandler)
-      : super(TelegramEventType.accelerometerStarted, eventHandler);
+  AccelerometerStartedEvent(void Function() eventHandler) : super(TelegramEventType.accelerometerStarted, eventHandler);
 }

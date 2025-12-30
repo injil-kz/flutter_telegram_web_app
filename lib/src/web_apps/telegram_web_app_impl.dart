@@ -10,6 +10,9 @@ class TelegramWebAppImpl extends TelegramWebApp {
   TelegramInitData get initData => TelegramInitData.fromRawString(Telegram.WebApp.initData);
 
   @override
+  String get initDataRaw => Telegram.WebApp.initData;
+
+  @override
   WebAppInitData? get initDataUnsafe => WebAppInitData(Telegram.WebApp.initDataUnsafe);
 
   @override
@@ -65,8 +68,7 @@ class TelegramWebAppImpl extends TelegramWebApp {
   SafeAreaInset get safeAreaInset => SafeAreaInset(Telegram.WebApp.safeAreaInset);
 
   @override
-  ContentSafeAreaInset get contentSafeAreaInset =>
-      ContentSafeAreaInset(Telegram.WebApp.contentSafeAreaInset);
+  ContentSafeAreaInset get contentSafeAreaInset => ContentSafeAreaInset(Telegram.WebApp.contentSafeAreaInset);
 
   @override
   BackButton get backButton => BackButton.instance;
@@ -123,20 +125,17 @@ class TelegramWebAppImpl extends TelegramWebApp {
   void disableVerticalSwipes() => Telegram.WebApp.disableVerticalSwipes();
 
   @override
-  void onEvent(TelegramEvent event) =>
-      Telegram.WebApp.onEvent(event.eventType.eventName, JsUtil.toJsFunction(event));
+  void onEvent(TelegramEvent event) => Telegram.WebApp.onEvent(event.eventType.eventName, JsUtil.toJsFunction(event));
 
   @override
-  void offEvent(TelegramEvent event) =>
-      Telegram.WebApp.offEvent(event.eventType.eventName, JsUtil.toJsFunction(event));
+  void offEvent(TelegramEvent event) => Telegram.WebApp.offEvent(event.eventType.eventName, JsUtil.toJsFunction(event));
 
   @override
   void sendData(String data) => Telegram.WebApp.sendData(data);
 
   @override
   void switchInlineQuery(String query, [List<ChatType>? chatTypes]) =>
-      Telegram.WebApp.switchInlineQuery(
-          query, chatTypes?.map((e) => e.chatType.toJS).toList().toJS);
+      Telegram.WebApp.switchInlineQuery(query, chatTypes?.map((e) => e.chatType.toJS).toList().toJS);
 
   @override
   void openLink(String url, {bool tryInstantView = true}) => Telegram.WebApp.openLink(
@@ -148,12 +147,10 @@ class TelegramWebAppImpl extends TelegramWebApp {
   void openTelegramLink(String url) => Telegram.WebApp.openTelegramLink(url);
 
   @override
-  void openInvoice(String url, [void Function(InvoiceStatus status)? onInvoiceStatus]) =>
-      Telegram.WebApp.openInvoice(
+  void openInvoice(String url, [void Function(InvoiceStatus status)? onInvoiceStatus]) => Telegram.WebApp.openInvoice(
         url,
         onInvoiceStatus != null
-            ? ((String status) =>
-                onInvoiceStatus.call(InvoiceStatus.values.firstWhere((e) => e.name == status))).toJS
+            ? ((String status) => onInvoiceStatus.call(InvoiceStatus.values.firstWhere((e) => e.name == status))).toJS
             : null,
       );
 
@@ -197,16 +194,14 @@ class TelegramWebAppImpl extends TelegramWebApp {
   }
 
   @override
-  void showAlert(String message, [void Function()? callback]) =>
-      Telegram.WebApp.showAlert(message, callback?.toJS);
+  void showAlert(String message, [void Function()? callback]) => Telegram.WebApp.showAlert(message, callback?.toJS);
 
   @override
   void showConfirm(String message, [void Function(bool isOkPressed)? callback]) =>
       Telegram.WebApp.showConfirm(message, callback?.toJS);
 
   @override
-  void showScanQrPopup(String? infoTitle, [bool Function(String result)? callback]) =>
-      Telegram.WebApp.showScanQrPopup(
+  void showScanQrPopup(String? infoTitle, [bool Function(String result)? callback]) => Telegram.WebApp.showScanQrPopup(
         ScanQrPopupParamsJSObject(text: infoTitle),
         callback?.toJS,
       );
@@ -223,8 +218,7 @@ class TelegramWebAppImpl extends TelegramWebApp {
       Telegram.WebApp.requestWriteAccess(onResult.toJS);
 
   @override
-  void requestContact([void Function(bool granted)? onResult]) =>
-      Telegram.WebApp.requestContact(onResult?.toJS);
+  void requestContact([void Function(bool granted)? onResult]) => Telegram.WebApp.requestContact(onResult?.toJS);
 
   @override
   void ready() => Telegram.WebApp.ready();

@@ -52,13 +52,13 @@ class JsUtil {
         }.toJS,
       TelegramEventType.fullscreenChanged => (event.eventHandler as void Function()).toJS,
       TelegramEventType.fullscreenFailed => (FullScreenFailedResultJSObject result) {
-        event.eventHandler(result.error.toDart);
+          event.eventHandler(result.error.toDart);
         }.toJS,
       TelegramEventType.deviceOrientationStarted => (event.eventHandler as void Function()).toJS,
       TelegramEventType.deviceOrientationStopped => (event.eventHandler as void Function()).toJS,
       TelegramEventType.deviceOrientationChanged => (event.eventHandler as void Function()).toJS,
       TelegramEventType.deviceOrientationFailed => (DeviceOrientationFailedResultJSObject result) {
-        event.eventHandler(result.error.toDart);
+          event.eventHandler(result.error.toDart);
         }.toJS,
       TelegramEventType.homeScreenAdded => (event.eventHandler as void Function()).toJS,
       TelegramEventType.homeScreenChecked => (HomeScreenCheckedResultJSObject result) {
@@ -86,12 +86,10 @@ class JsUtil {
         }.toJS,
       TelegramEventType.emojiStatusSet => (event.eventHandler as void Function()).toJS,
       TelegramEventType.emojiStatusFailed => (EmojiStatusFailedResultJSObject result) {
-        event.eventHandler(result.error.toDart);
+          event.eventHandler(result.error.toDart);
         }.toJS,
-      TelegramEventType.emojiStatusAccessRequested =>
-        (event.eventHandler as void Function(String status)).toJS,
-      TelegramEventType.fileDownloadRequested =>
-        (event.eventHandler as void Function(String status)).toJS,
+      TelegramEventType.emojiStatusAccessRequested => (event.eventHandler as void Function(String status)).toJS,
+      TelegramEventType.fileDownloadRequested => (event.eventHandler as void Function(String status)).toJS,
     };
   }
 }

@@ -118,8 +118,7 @@ extension type WebAppJSObject._(JSObject _) implements JSObject {
 
   external void showConfirm(String message, [JSExportedDartFunction? callback]);
 
-  external void showScanQrPopup(ScanQrPopupParamsJSObject params,
-      [JSExportedDartFunction? callback]);
+  external void showScanQrPopup(ScanQrPopupParamsJSObject params, [JSExportedDartFunction? callback]);
 
   external void closeScanQrPopup();
 

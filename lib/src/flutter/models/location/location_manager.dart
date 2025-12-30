@@ -30,7 +30,7 @@ class LocationManager {
   /// If an optional callback parameter is provided, the callback function will be called when the object is initialized.
   Future<void> init() {
     final completer = Completer<void>();
-    
+
     Telegram.WebApp.LocationManager.init(() {
       completer.complete();
     }.toJS);

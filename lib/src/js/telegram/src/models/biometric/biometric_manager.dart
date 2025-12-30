@@ -17,9 +17,11 @@ extension type BiometricManagerJSObject._(JSObject _) implements JSObject {
 
   external BiometricManagerJSObject init([JSExportedDartFunction? callback]);
 
-  external BiometricManagerJSObject requestAccess(BiometricRequestAccessParamsJSObject params, [JSExportedDartFunction? callback]);
+  external BiometricManagerJSObject requestAccess(BiometricRequestAccessParamsJSObject params,
+      [JSExportedDartFunction? callback]);
 
-  external BiometricManagerJSObject authenticate(BiometricAuthenticateParamsJSObject params, [JSExportedDartFunction? callback]);
+  external BiometricManagerJSObject authenticate(BiometricAuthenticateParamsJSObject params,
+      [JSExportedDartFunction? callback]);
 
   external BiometricManagerJSObject updateBiometricToken(String token, [JSExportedDartFunction? callback]);
 

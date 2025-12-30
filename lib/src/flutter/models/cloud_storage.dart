@@ -36,16 +36,15 @@ class CloudStorage {
   /// In case of an [error], the callback function will be called and the first argument
   /// will contain the error. In case of [success], the first argument will be null
   /// and the values will be passed as the second argument.
-  CloudStorage getItems(List<String> keys, void Function(String? error, [List<String>? values]) callback)  {
-     Telegram.WebApp.CloudStorage
-        .getItems(
-          keys.map((e) => e.toJS).toList().toJS,
-          (JSString? error, JSArray<JSString>? values) {
-            callback(error?.toDart, values?.toDart.map((e) => e.toDart).toList());
-          }.toJS,
-        );
+  CloudStorage getItems(List<String> keys, void Function(String? error, [List<String>? values]) callback) {
+    Telegram.WebApp.CloudStorage.getItems(
+      keys.map((e) => e.toJS).toList().toJS,
+      (JSString? error, JSArray<JSString>? values) {
+        callback(error?.toDart, values?.toDart.map((e) => e.toDart).toList());
+      }.toJS,
+    );
 
-     return this;
+    return this;
   }
 
   /// A method that removes a value from the cloud storage using the specified key.
@@ -76,14 +75,13 @@ class CloudStorage {
   /// In case of an [error], the callback function will be called and the first argument will contain
   /// the error. In case of [success], the first argument will be null and the list of keys will be
   /// passed as the second argument.
-  CloudStorage getKeys(void Function(String? error, [List<String>? keys]) callback)  {
-     Telegram.WebApp.CloudStorage
-        .getKeys(
-          (JSString? error, JSArray<JSString>? keys) {
-            callback(error?.toDart, keys?.toDart.map((e) => e.toDart).toList());
-          }.toJS,
-        );
+  CloudStorage getKeys(void Function(String? error, [List<String>? keys]) callback) {
+    Telegram.WebApp.CloudStorage.getKeys(
+      (JSString? error, JSArray<JSString>? keys) {
+        callback(error?.toDart, keys?.toDart.map((e) => e.toDart).toList());
+      }.toJS,
+    );
 
-     return this;
+    return this;
   }
 }

@@ -8,6 +8,5 @@ class BiometricAuthenticateParams {
   /// and what action you will be taking based on that authentication,
   /// 0-128 characters.
   final String? reason;
-  BiometricAuthenticateParams({required this.reason})
-      : assert(reason == null || reason.length <= 128);
+  BiometricAuthenticateParams({required this.reason}) : assert(reason == null || reason.length <= 128);
 }

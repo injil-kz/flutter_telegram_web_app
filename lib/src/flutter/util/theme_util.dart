@@ -2,8 +2,7 @@ part of '../../../telegram_web_app.dart';
 
 abstract class TelegramThemeUtil {
   static ThemeData? getTheme(TelegramWebApp telegram) {
-    ThemeData theme =
-        telegram.colorScheme == TelegramColorScheme.dark ? ThemeData.dark() : ThemeData.light();
+    ThemeData theme = telegram.colorScheme == TelegramColorScheme.dark ? ThemeData.dark() : ThemeData.light();
 
     return theme.copyWith(
       primaryColor: telegram.themeParams.headerBgColor,

@@ -1,7 +1,7 @@
 part of '../../../../telegram_web_app.dart';
 
 /// **Bot API 8.0+**
-/// 
+///
 /// This object defines the parameters for starting accelerometer tracking.
 class AccelerometerStartParams {
   /// The refresh rate in milliseconds, with acceptable
