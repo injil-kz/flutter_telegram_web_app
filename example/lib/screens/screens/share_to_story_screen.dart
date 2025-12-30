@@ -87,8 +87,7 @@ class _ShareToStoryScreenState extends State<ShareToStoryScreen> {
       controller: controller,
       decoration: const InputDecoration(
           enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 2.0)),
-          focusedBorder:
-              OutlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 2.0))),
+          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 2.0))),
     );
   }
 

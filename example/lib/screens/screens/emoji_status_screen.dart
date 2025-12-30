@@ -27,8 +27,7 @@ class _EmojiStatusScreenState extends State<EmojiStatusScreen> {
   void initEvents() {
     TelegramWebApp.instance.onEvent(EmojiStatusSetEvent(emojiStatusSet));
     TelegramWebApp.instance.onEvent(EmojiStatusFailedEvent(emojiStatusFailed));
-    TelegramWebApp.instance
-        .onEvent(EmojiStatusAccessRequestedEvent(emojiStatusAccessRequested));
+    TelegramWebApp.instance.onEvent(EmojiStatusAccessRequestedEvent(emojiStatusAccessRequested));
   }
 
   @override
@@ -53,8 +52,7 @@ class _EmojiStatusScreenState extends State<EmojiStatusScreen> {
         child: Column(
           children: [
             ListButton("requestEmojiStatusAccess", onPress: () async {
-              final result =
-                  await TelegramWebApp.instance.requestEmojiStatusAccess();
+              final result = await TelegramWebApp.instance.requestEmojiStatusAccess();
               print("requestEmojiStatusAccess result: $result");
 
               setState(() {
@@ -70,8 +68,7 @@ class _EmojiStatusScreenState extends State<EmojiStatusScreen> {
                   FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
                 ],
                 maxLines: 1,
-                decoration:
-                    const InputDecoration(hintText: "Duration in seconds"),
+                decoration: const InputDecoration(hintText: "Duration in seconds"),
               ),
               TextField(
                 controller: customEmojiIdController,
@@ -80,19 +77,14 @@ class _EmojiStatusScreenState extends State<EmojiStatusScreen> {
                   FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
                 ],
                 maxLines: 1,
-                decoration: const InputDecoration(
-                    hintText: "Custom Emoji ID (e.g. 5444965061749644170)"),
+                decoration: const InputDecoration(hintText: "Custom Emoji ID (e.g. 5444965061749644170)"),
               ),
               const SizedBox(height: 16),
               ListButton("setEmojiStatus", onPress: () async {
                 final result = await TelegramWebApp.instance.setEmojiStatus(
-                    customEmojiIdController.text.isEmpty
-                        ? "5444965061749644170"
-                        : customEmojiIdController.text,
-                    params: controller.text.isEmpty
-                        ? null
-                        : EmojiStatusParams(
-                            duration: int.tryParse(controller.text)));
+                    customEmojiIdController.text.isEmpty ? "5444965061749644170" : customEmojiIdController.text,
+                    params:
+                        controller.text.isEmpty ? null : EmojiStatusParams(duration: int.tryParse(controller.text)));
                 print("setEmojiStatus result: $result");
               }),
             ]

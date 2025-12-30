@@ -107,8 +107,7 @@ class _MainScreenState extends State<MainScreen> {
                 children: [
                   const Text('isClosingConfirmationEnabled'),
                   const SizedBox(height: 8),
-                  Text(telegram.isClosingConfirmationEnabled.toString(),
-                      style: const TextStyle(fontSize: 16)),
+                  Text(telegram.isClosingConfirmationEnabled.toString(), style: const TextStyle(fontSize: 16)),
                   const SizedBox(height: 16),
                   Row(
                     children: [
@@ -134,43 +133,37 @@ class _MainScreenState extends State<MainScreen> {
           ListButton(
             'Fullscreen',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const FullscreenScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FullscreenScreen()));
             },
           ),
           ListButton(
             'Accelerometer',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const AccelerometerScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AccelerometerScreen()));
             },
           ),
           ListButton(
             'Gyroscope',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const GyroscopeScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const GyroscopeScreen()));
             },
           ),
           ListButton(
             'Orientation',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const OrientationScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OrientationScreen()));
             },
           ),
           ListButton(
             'Emoji Status',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const EmojiStatusScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const EmojiStatusScreen()));
             },
           ),
           ListButton(
             'BackButton',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const BackButtonScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const BackButtonScreen()));
             },
           ),
           ListButton(
@@ -196,64 +189,55 @@ class _MainScreenState extends State<MainScreen> {
           ListButton(
             'SettingsButton',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const SettingsButtonScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SettingsButtonScreen()));
             },
           ),
           ListButton(
             'HapticFeedback',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const HapticFeedbackScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HapticFeedbackScreen()));
             },
           ),
           ListButton(
             'CloudStorage',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const CloudStorageScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CloudStorageScreen()));
             },
           ),
           ListButton(
             'Share To Story',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const ShareToStoryScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ShareToStoryScreen()));
             },
           ),
           ListButton(
             'BiometricsManager',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const BiometricManagerScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const BiometricManagerScreen()));
             },
           ),
           ListButton(
             'LocationManager',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const LocationManagerScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LocationManagerScreen()));
             },
           ),
           ListButton(
             'AddToHomeScreen',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const AddToHomeScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AddToHomeScreen()));
             },
           ),
           ListButton(
             'DownloadFileScreen',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const FileDownloadScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FileDownloadScreen()));
             },
           ),
           ListButton(
             'ShareMessageScreen',
             onPress: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const ShareMessageScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ShareMessageScreen()));
             },
           ),
           InfoExpandableTile('isVersionAtLeast(6.1)', isDefinedVersion.toString()),
@@ -367,8 +351,7 @@ class _MainScreenState extends State<MainScreen> {
             onPress: () {
               telegram.readTextFromClipboard(
                 (result) {
-                  'Clipboard text: $result, You can call this method only by MainButton'
-                      .showSnackbar(context);
+                  'Clipboard text: $result, You can call this method only by MainButton'.showSnackbar(context);
                 },
               );
             },
@@ -389,8 +372,7 @@ class _MainScreenState extends State<MainScreen> {
               );
             },
           ),
-          ListButton('Switch inline query',
-              onPress: () => telegram.switchInlineQuery("Hello Telegram")),
+          ListButton('Switch inline query', onPress: () => telegram.switchInlineQuery("Hello Telegram")),
           ListButton('sendData', onPress: () {
             telegram.sendData('Hello this message is from mini app');
           }),

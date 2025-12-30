@@ -138,9 +138,7 @@ class _CloudStorageScreenState extends State<CloudStorageScreen> {
             const Divider(height: 12),
 
             /// **************** Get Keys method ***************
-            ElevatedButton(
-                onPressed: () => cloudStorage.getKeys(onGetKeysCallback),
-                child: const Text('getKeys')),
+            ElevatedButton(onPressed: () => cloudStorage.getKeys(onGetKeysCallback), child: const Text('getKeys')),
 
             const SizedBox(height: 24),
             const Divider(height: 12),
